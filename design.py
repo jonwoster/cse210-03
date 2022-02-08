@@ -11,7 +11,7 @@ Will use encapsulation by using "_" in front of attribute names (such as self._a
     to prevent classes from changing each others attributes directly. Data passed into 
     and out of classes to be done using arguments and return statements.
 
-__main__.py will be in jumper folder, will call the Director class -Jonathan to create main
+__main__.py will be in jumper folder, will call the Director class -Jonathan to create main, done
 jumper folder will have a game folder
 game folder will have:
     director.py (with Director class in it)  -Camron to create the file
