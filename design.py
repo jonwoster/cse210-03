@@ -42,10 +42,12 @@ Director class
         what is left of the parachute and the person
 
 Evaluate_guess class - Jonathan
-    Gets the guess and secret word from Director via arguments
+    Gets the guess and secret word and guess count from Director via arguments
     Checks the guess against the secret word
-    Updates the string to remove lines from the parachute list if needed
-    Updates the word to shows proper spaces and letters
+    get_jumper_image(self, user_guess, secret_word)   Updates the string to remove lines from the parachute list if needed
+        and returns self._jumper_image
+    def get_word_printout()    returns the word to shows proper spaces and letters self._word_printout
+    
     Returns updated list for parachute and returns the updated string for the word
     
 Terminal_service class - Arnaldo
