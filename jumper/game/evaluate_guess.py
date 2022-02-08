@@ -13,7 +13,7 @@ class Evaluate_guess:
         Returns updated list for parachute and returns the updated string for the word
     
     Attributes:
-        ???
+        
     """
 
     def __init__(self):
@@ -23,7 +23,9 @@ class Evaluate_guess:
             self (Seeker): An instance of Evaluate_guess
         """
         # list of strings to represent the parachute and jumper
-        self._jumper_image = ["  ___", " /   \\", "  ___", " \\   / ", "  \\ / ", '   O', "  /|\\", "  / \\", " ", "~~~~~~~~" ]  
+        self._jumper_image = ["  ___", " /   \\", "  ___", " \\   / ", "  \\ / ", '   O', "  /|\\", "  / \\", " ", "~~~~~~~~" ] 
+
+        self._word_printout = ["- - - - - - word guessed so far will go here"] 
     
     def get_jumper_image(self, user_guess, secret_word, guess_number):
         """Receives the guess and the secret word from Director class
@@ -42,6 +44,7 @@ class Evaluate_guess:
 
         return self._jumper_image
 
-    def get_word_printout():
+    def get_word_printout(self):
         # stuff goes here
+        
         return self._word_printout
