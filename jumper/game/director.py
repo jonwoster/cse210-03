@@ -21,6 +21,10 @@ class Director:
             self.capture_guess()
             self.do_update()
             
+    def secret_word(self):
+        word = Word_Generator()
+        self._secret_word = word.generate_word()
+    
     def display_status(self):
         self._image = self._evaluate_guess.get_jumper_image(self._user_guess, self._secret_word)
         self._terminal_service.write_text(self._image)
