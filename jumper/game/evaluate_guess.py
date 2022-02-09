@@ -1,11 +1,9 @@
 
 
-    
 class Evaluate_guess:
 
     """Evaluates the guess
-    
-    The responsibility of the Evaluate_guess class is to 
+        The responsibility of the Evaluate_guess class is to 
         Gets the guess and secret word from Director via arguments
         Checks the guess against the secret word
         Updates the string to remove lines from the parachute list if needed
@@ -29,7 +27,6 @@ class Evaluate_guess:
     
     def get_jumper_image(self, user_guess, secret_word, guess_number):
         """Receives the guess and the secret word from Director class
-        
             Checks the guess against the secret word
             Updates the string to remove lines from the parachute list if needed
             Updates the word to shows proper spaces and letters
@@ -38,13 +35,31 @@ class Evaluate_guess:
         Returns:
             list: the parachute and jumper strings (the GUI representation)
         """
-        self._guess = user_guess
-        self._secret_word = secret_word
+        self._guess = user_guess.lower()  # make sure the guess is lower case
+        self._secret_word = secret_word.lower()  # make sure the secret word is lower case
         self._guess_number = guess_number
+        
+        # Count how many times the guessed letter is in the secret word
+        self._occurences = self._secret_word.count(self._guess)
 
+        # if the letter that was guessed is not in self._secret_word
+        if self._occurences == 0:
+            # then remove the first item in self._jumper_image
+            self._jumper_image.pop(0)
+
+         # if the letter that was guessed is in self._secret_word
+        #elif self._occurences > 0:
+            # then update the self._word_printout
+            #for i in range(self._occurences):
+            #    find()
+
+
+        print(f"jumper image from within Evaluate_guess is {self._jumper_image}") # for debugging
+        # send the jumper image list of strings back to the calling function/class
         return self._jumper_image
 
     def get_word_printout(self):
         # stuff goes here
         
+        print(f"word_printout from wihtin get_word_printout is {self._word_printout}") # for debugging
         return self._word_printout
