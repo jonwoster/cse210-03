@@ -10,7 +10,7 @@ class Director:
         self._terminal_service = Terminal_service()
         self._secret_word = ""
         #could be assigned here or in the method
-        self.user_guess = ""
+        self._user_guess = ""
         #update through capture_guess?
 
     def start_game(self):
@@ -20,6 +20,9 @@ class Director:
             self.do_update()
             self.display_status()
 
+    def capture_guess(self):
+        self._user_guess = self._terminal_service.read_letter("Guess a letter [a-z]: ")
+    
     def do_update(self):
         """Sends guess info to 'Evaluate_guess and recieves the updated image and word string. Then sends results to 'Terminal_service' to be displayed."""
         guess = Evaluate_guess()
