@@ -1,6 +1,6 @@
 from evaluate_guess import Evaluate_guess
 from terminal_service import Terminal_service
-from .word_generator import Word_generator
+from word_generator import Word_Generator
 
 class Director:
     """This class will be where the main sequence of the game takes place by incorporating the other classes in the program."""
