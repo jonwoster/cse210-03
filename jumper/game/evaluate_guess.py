@@ -48,10 +48,12 @@ class Evaluate_guess:
             self._jumper_image.pop(0)
 
          # if the letter that was guessed is in self._secret_word then loop through to replace blanks with letters
-        #elif self._occurences > 0:
+        elif self._occurences > 0:
             # then update the self._word_printout
-            #for i in range(self._occurences):
-            #    find()
+            list_of_occurences = []
+            for pos,char in enumerate(self._secret_word):
+                if(char == self._guess):
+                    list_of_occurences.append(pos)
 
 
         print(f"Debugging: jumper image from within Evaluate_guess is {self._jumper_image}") # for debugging
