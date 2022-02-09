@@ -25,7 +25,7 @@ class Evaluate_guess:
 
         self._word_printout = ["- - - - - - word guessed so far will go here"] 
     
-    def get_jumper_image(self, user_guess, secret_word, guess_number):
+    def get_jumper_image(self, user_guess, secret_word):
         """Receives the guess and the secret word from Director class
             Checks the guess against the secret word
             Updates the string to remove lines from the parachute list if needed
@@ -37,7 +37,6 @@ class Evaluate_guess:
         """
         self._guess = user_guess.lower()  # make sure the guess is lower case
         self._secret_word = secret_word.lower()  # make sure the secret word is lower case
-        self._guess_number = guess_number
         
         # Count how many times the guessed letter is in the secret word
         self._occurences = self._secret_word.count(self._guess)
@@ -56,12 +55,12 @@ class Evaluate_guess:
                     list_of_occurences.append(pos)
 
 
-        print(f"Debugging: jumper image from within Evaluate_guess is {self._jumper_image}") # for debugging
+        # print(f"Debugging: jumper image from within Evaluate_guess is {self._jumper_image}") # for debugging
         # send the jumper image list of strings back to the calling function/class
         return self._jumper_image
 
     def get_word_printout(self):
         # stuff goes here
         
-        print(f"Debugging: word_printout from wihtin get_word_printout is {self._word_printout}") # for debugging
+        # print(f"Debugging: word_printout from wihtin get_word_printout is {self._word_printout}") # for debugging
         return self._word_printout

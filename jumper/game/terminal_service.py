@@ -1,4 +1,4 @@
-class TerminalService:
+class Terminal_service:
     
     def read_letter(self, prompt):
        
