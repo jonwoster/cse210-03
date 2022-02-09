@@ -47,19 +47,19 @@ class Evaluate_guess:
             # then remove the first item in self._jumper_image
             self._jumper_image.pop(0)
 
-         # if the letter that was guessed is in self._secret_word
+         # if the letter that was guessed is in self._secret_word then loop through to replace blanks with letters
         #elif self._occurences > 0:
             # then update the self._word_printout
             #for i in range(self._occurences):
             #    find()
 
 
-        print(f"jumper image from within Evaluate_guess is {self._jumper_image}") # for debugging
+        print(f"Debugging: jumper image from within Evaluate_guess is {self._jumper_image}") # for debugging
         # send the jumper image list of strings back to the calling function/class
         return self._jumper_image
 
     def get_word_printout(self):
         # stuff goes here
         
-        print(f"word_printout from wihtin get_word_printout is {self._word_printout}") # for debugging
+        print(f"Debugging: word_printout from wihtin get_word_printout is {self._word_printout}") # for debugging
         return self._word_printout
