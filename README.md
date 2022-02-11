@@ -4,7 +4,7 @@ Contributors are: Monika Meyers, Camron Erickson, Arnaldo Suarez, Jonathan Woste
 Team assignment- Jumper game
 
 ## Description:
-- This is a simple interactive game where a user guesses whether a card will be higher or lower than the current card shown. This project was created for CSE 210 at BYU Idaho.
+- This is a simple interactive game where a user guesses a word. This project was created for CSE 210 at BYU Idaho.
 
 Within the cse210-03 repository there is this README file, a design file with internal team notes, and the jumper folder.
 
