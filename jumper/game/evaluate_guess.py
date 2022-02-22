@@ -20,7 +20,7 @@ class Evaluate_guess:
         self._jumper_image = ["  ___", " /___\\", " \\   / ", "  \\ / ", '   O', "  /|\\", "  / \\", " ", "~~~~~~~~" ] 
 
 
-    def get_jumper_image(self, user_guess, secret_word):
+    def _get_jumper_image(self, user_guess, secret_word):
         """Receives the guess and the secret word from Director class
             Checks the guess against the secret word
             Updates the list of strings to remove lines from the parachute list if needed
@@ -57,7 +57,7 @@ class Evaluate_guess:
         # send the jumper image list of strings back to the calling function/class
         return self._picture
 
-    def get_word_printout(self, secret_word, guess, hidden_word):
+    def _get_word_printout(self, secret_word, guess, hidden_word):
         """Receives the hidden word string, the guess from user and the secret word from the calling class
             Checks the guess against the secret word
             Updates the hidden_word to show the right letters and dashes
@@ -69,18 +69,18 @@ class Evaluate_guess:
 
         self._word_printout = "" # set this up as a blank string that will be modified in this method
         # Load the hidden word into letter_list
-        self.letter_list = list(hidden_word.replace(" ",""))
+        self._letter_list = list(hidden_word.replace(" ",""))
 
         # If the guessed letter is in the secret word, loop through and put the right letter in the right spot
         if guess in secret_word:
             for i in range(0,len(secret_word)):
-                letter = secret_word[i]
-                if guess == letter:
-                    self.letter_list.insert(i, guess)
-                    self.letter_list.pop(i+1)
+                _letter = secret_word[i]
+                if guess == _letter:
+                    self._letter_list.insert(i, guess)
+                    self._letter_list.pop(i+1)
         
         # Loop through every item in letter_list to build string to print out for user
-        for i in self.letter_list:
+        for i in self._letter_list:
             self._word_printout += i + " "
 
         # Send the string back that will show the guessed letters and remaining underscores

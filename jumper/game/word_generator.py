@@ -21,7 +21,7 @@ class Word_Generator:
         # Sets up the list of words from which the secret word will come from
         self._word_list = ["apple","arm","ball","banana","bat","bed","bike","bird","book","boy","bun","cake","can","cap","car","cat","chin","clam","class","clover","club","corn","cow","crayon","crib","crow","crowd","crown","cub","cup","dad","day","desk","dime","dirt","dog","doll","dress","dust","fan","fang","feet","field","flag","flower","fog","game","girl","gun","hall","hat","heat","hen","hill","home","horn","hose","jar","joke","juice","kite","lake","maid","man","map","mask","meal","meat","men","mice","milk","mint","mom","moon","morning","mother","name","nest","nose","pan","pear","pen","pencil","pet","pie","pig","plant","pot","rain","rat","river","road","rock","room","rose","seed","shape","shoe","shop","show","sink","snail","snake","snow","soda","sofa","son","star","step","stew","stove","straw","string","summer","sun","swing","table","tank","team","tent","test","toe","toes","tree","tub","van","vest","water","wing","winter","woman","women"]
 
-    def generate_word(self):
+    def _generate_word(self):
         # This method generates the secret word by choosing from a list of words
         # Returns self._word
         
