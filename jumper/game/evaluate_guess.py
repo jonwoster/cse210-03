@@ -20,7 +20,7 @@ class Evaluate_guess:
         self._jumper_image = ["  ___", " /___\\", " \\   / ", "  \\ / ", '   O', "  /|\\", "  / \\", " ", "~~~~~~~~" ] 
 
 
-    def _get_jumper_image(self, user_guess, secret_word):
+    def get_jumper_image(self, user_guess, secret_word):
         """Receives the guess and the secret word from Director class
             Checks the guess against the secret word
             Updates the list of strings to remove lines from the parachute list if needed
@@ -57,7 +57,7 @@ class Evaluate_guess:
         # send the jumper image list of strings back to the calling function/class
         return self._picture
 
-    def _get_word_printout(self, secret_word, guess, hidden_word):
+    def get_word_printout(self, secret_word, guess, hidden_word):
         """Receives the hidden word string, the guess from user and the secret word from the calling class
             Checks the guess against the secret word
             Updates the hidden_word to show the right letters and dashes
